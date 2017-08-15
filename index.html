@@ -12,6 +12,8 @@
     <div>
       <button id='shawn'>Shawn's Tweets</button>
       <button id='douglas'>Douglas Tweets</button>
+      <button id='sharks'>Sharks Tweets</button>
+      <button id='mracus'>Mracus Tweets</button>
     </div>
   
       <button id='newTweet'>New Tweets</button>
@@ -75,8 +77,40 @@
         }
       }); //Douggie end   
   
+        $('#sharks').click(function() {
+        //alert("shawn click");
+       
+       var $feed = $('#feed');
+          $feed.html('');
+          var index = streams.users.sharksforcheap.length - 1;
+          while(index >= 0){
+            var tweet = streams.users.sharksforcheap[index];
+            var $tweet = $('<div></div>');
+            var time = moment().calendar();
+
+            $tweet.text('@' + tweet.user + ': ' + tweet.message + ' : ' +time);
+            $tweet.appendTo($feed);
+            index -= 1;
+        }
+      }); //Mracus end 
 
 
+       $('#mracus').click(function() {
+        //alert("shawn click");
+       
+       var $feed = $('#feed');
+          $feed.html('');
+          var index = streams.users.mracus.length - 1;
+          while(index >= 0){
+            var tweet = streams.users.mracus[index];
+            var $tweet = $('<div></div>');
+            var time = moment().calendar();
+
+            $tweet.text('@' + tweet.user + ': ' + tweet.message + ' : ' +time);
+            $tweet.appendTo($feed);
+            index -= 1;
+        }
+      }); //Mracus end 
 
 
       });//end of document ready
