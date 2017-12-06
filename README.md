@@ -1,2 +1,2 @@
 #twittler
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+This is a project I completed as a student at [hackreactor](http://hackreactor.com). The goal of the project was to simulate the real twiter application.
